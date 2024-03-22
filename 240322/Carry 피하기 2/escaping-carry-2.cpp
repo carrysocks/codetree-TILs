@@ -20,9 +20,9 @@ int main() {
                 int idx = 1;
                 int d = 1;
                 while(idx++ <= 5){
-                    if(arr[i] % (d*10) / d + 
+                    if((arr[i] % (d*10) / d + 
                         arr[j] % (d*10) / d + 
-                        arr[k] % (d*10) / d 
+                        arr[k] % (d*10) / d )
                         > 10
                     ) isCarry = true;
                     d *= 10;
