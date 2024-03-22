@@ -23,7 +23,7 @@ int main() {
                     if((arr[i] % (d*10) / d + 
                         arr[j] % (d*10) / d + 
                         arr[k] % (d*10) / d )
-                        > 10
+                        >= 10
                     ) isCarry = true;
                     d *= 10;
                 }
