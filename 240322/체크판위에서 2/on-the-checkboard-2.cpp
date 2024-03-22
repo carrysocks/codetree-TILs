@@ -15,6 +15,7 @@ int main() {
             else board[i][j] = 1;
         }
     }
+
     int ans = 0;
     int color1 = board[0][0];
     for(int i=1;i<n-1;i++){
@@ -29,5 +30,6 @@ int main() {
         }
     }
 
-    cout << ans;
+    if(board[0][0] == board[n-1][m-1]) cout << 0;
+    else cout << ans;
 }
