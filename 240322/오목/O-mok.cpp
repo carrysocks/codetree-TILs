@@ -18,10 +18,17 @@ bool isCol(int i, int j, int t){
     return true;
 }
 
-bool isDiagonal(int i, int j, int t){
+bool isDiagonalRight(int i, int j, int t){
     if(j+5 >= 19 || i+5 >= 19) return false;
     for(int d=0;d<5;d++)
         if(board[i+d][j+d] != t) return false;
+    return true;
+}
+
+bool isDiagonalLeft(int i, int j, int t){
+    if(j - 5 < 0 || i+5 >= 19) return false;
+    for(int d=0;d<5;d++)
+        if(board[i+d][j-d] != t) return false;
     return true;
 }
 
@@ -44,9 +51,13 @@ int main() {
                 ans = 1;
                 y = i + 2, x = j;
             }
-            else if(isDiagonal(i,j,1)){
+            else if(isDiagonalRight(i,j,1)){
                 ans = 1;
                 y = i + 2, x = j + 2;
+            }
+            else if(isDiagonalLeft(i,j,1)){
+                ans = 1;
+                y = i + 2, x = j - 2;
             }
             else if(isRow(i,j,2)){
                 ans = 2;
@@ -56,9 +67,13 @@ int main() {
                 ans = 2;
                 y = i + 2, x = j;
             }
-            else if(isDiagonal(i,j,2)){
+            else if(isDiagonalRight(i,j,2)){
                 ans = 2;
                 y = i + 2, x = j + 2;
+            }
+            else if(isDiagonalLeft(i,j,2)){
+                ans = 2;
+                y = i + 2, x = j - 2;
             }
         }
     }
