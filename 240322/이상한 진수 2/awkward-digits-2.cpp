@@ -17,7 +17,7 @@ int main() {
         }
     }
 
-    if(!isZero) str[0] = '0';
+    if(!isZero) str[n-1] = '0';
 
     int ans = 0, idx = 0;
     for(int i=n-1;i>=0;i--){
