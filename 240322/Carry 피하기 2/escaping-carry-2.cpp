@@ -17,7 +17,7 @@ int main() {
             for(int k=j+1;k<n;k++){
                 
                 isCarry = false;
-                int idx = 1;
+                int idx = 0;
                 int d = 1;
                 while(idx++ <= 5){
                     if((arr[i] % (d*10) / d + 
