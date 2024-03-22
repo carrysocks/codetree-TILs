@@ -5,28 +5,28 @@ using namespace std;
 int board[21][21];
 
 bool isRow(int i, int j, int t){
-    if(j+5 >= 19) return false;
+    if(j+4 >= 19) return false;
     for(int d=0;d<5;d++)
         if(board[i][j+d] != t) return false;
     return true;
 }
 
 bool isCol(int i, int j, int t){
-    if(i+5 >= 19) return false;
+    if(i+4 >= 19) return false;
     for(int d=0;d<5;d++)
         if(board[i+d][j] != t) return false;
     return true;
 }
 
 bool isDiagonalRight(int i, int j, int t){
-    if(j+5 >= 19 || i+5 >= 19) return false;
+    if(j+4 >= 19 || i+4 >= 19) return false;
     for(int d=0;d<5;d++)
         if(board[i+d][j+d] != t) return false;
     return true;
 }
 
 bool isDiagonalLeft(int i, int j, int t){
-    if(j - 5 < 0 || i+5 >= 19) return false;
+    if(j-4 < 0 || i+4 >= 19) return false;
     for(int d=0;d<5;d++)
         if(board[i+d][j-d] != t) return false;
     return true;
